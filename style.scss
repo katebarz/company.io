@@ -26,12 +26,12 @@ header {
         font-weight: 800;
         font-size: 24px;
         cursor: pointer;
-        margin-top: 55px;
+        margin-top: 40px;
         margin-left: 10%;
     }
 
     nav {
-        margin-top: 55px;
+        margin-top: 40px;
         margin-left: 30%;
 
         .top-nav {
@@ -55,47 +55,157 @@ header {
     }
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
 
-@media screen and (max-width: 1170px){
-	header{
-		nav{
-			margin-left:20%;
-		}
-	}
+    .welcome {
+
+        text-align: center;
+        padding: 200px 0 400px 0;
+
+        h1 {
+            color: #999999;
+            font-size: 44px;
+
+            .mycompany {
+                color: #fcac45;
+            }
+
+        }
+
+        p {
+            color: #999999;
+            font-size: 20px;
+
+            b {
+                color: #c1bfc0;
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 1010px) {
-	header{
-		nav{
-			width:100%;
-			.top-nav{
-				a{
-					display:none;
-				}
-				.icon{
-					float: right;
-					margin-top:-17px;
-					display:block;
-					color:#FFF;
-					font-size:25px;
-				}
-				&.responsive{
-					position: relative;
-					top:50px;
-					left: -270px;
-					height: 340px;
-					a{
-						float:none;
-						display: block;
-						text-align: left;
-						&.icon{
-							position:absolute;
-							top:-50px;
-							right:-200px;
-						}
-					}
-				}
-			}
-		}
-	}
+.about {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    padding: 100px 0;
+
+    .about-right {
+        margin-left: 170px;
+
+        h1 {
+            display: inline-block;
+            border-bottom: 3px solid #fcac45;
+            padding-bottom: 15px;
+
+            span {
+                font-weight: 400;
+            }
+        }
+
+        p {
+            padding: 30px 0 40px 0;
+            color: #6c6c6c;
+
+        }
+
+        ul {
+            color: #5a5a5a;
+
+            li {
+                padding-left: 25px;
+                margin-top: 10px;
+
+                i {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .mw-100 {
+        min-width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 1170px) {
+    header {
+        nav {
+            margin-left: 20%;
+        }
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    header {
+        nav {
+            width: 100%;
+
+            .top-nav {
+                a {
+                    display: none;
+                }
+
+                .icon {
+                    float: right;
+                    margin-top: -17px;
+                    display: block;
+                    color: #FFF;
+                    font-size: 25px;
+                }
+
+                &.responsive {
+                    position: relative;
+                    top: 50px;
+                    left: -270px;
+                    height: 340px;
+
+                    a {
+                        float: none;
+                        display: block;
+                        text-align: left;
+
+                        &.icon {
+                            position: absolute;
+                            top: -50px;
+                            right: -200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 50px 0 50px 0;
+
+        .mw-100 {
+            max-width: 100%;
+        }
+
+        .about-right {
+            margin-left: 0;
+            text-align: center;
+
+            p {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            li {
+                text-align: left;
+            }
+        }
+    }
+
 }
