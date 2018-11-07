@@ -90,13 +90,6 @@ header {
   .team h1 {
     font-size: 44px;
     padding-bottom: 10px; }
-  .team .line {
-    width: 100px;
-    height: 3px;
-    background-color: #fcac45;
-    position: relative;
-    left: 46.5%;
-    margin-bottom: 40px; }
   .team .team-cards {
     width: 75%;
     margin: 0 auto;
@@ -117,6 +110,46 @@ header {
         margin-bottom: 30px; }
       .team .team-cards .card .about-position {
         font-size: 14px; }
+
+.line {
+  width: 100px;
+  height: 3px;
+  background-color: #fcac45;
+  position: relative;
+  left: 46.5%;
+  margin-bottom: 40px; }
+
+.services {
+  width: 75%;
+  margin: 0 auto;
+  padding: 50px 0; }
+  .services h1 {
+    text-align: center;
+    padding-bottom: 10px; }
+  .services p {
+    color: #6c6c6c;
+    margin-bottom: 50px; }
+  .services .services-cards {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 20px; }
+    .services .services-cards .services-card h4 {
+      margin: 10px 0; }
+    .services .services-cards .services-card .services-icon {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      border: 3px solid #fcac45;
+      border-radius: 50%;
+      display: table; }
+      .services .services-cards .services-card .services-icon:hover {
+        transition: .6s;
+        border: 3px solid black; }
+      .services .services-cards .services-card .services-icon i {
+        font-size: 54px;
+        display: table-cell;
+        vertical-align: middle; }
 
 @media screen and (max-width: 1170px) {
   header nav {
@@ -160,11 +193,17 @@ header {
         font-size: 20px;
         margin-top: 10px; }
       .about .about-right li {
-        text-align: left; } }
+        text-align: left; }
+
+  .services .services-cards {
+    grid-template-columns: repeat(2, auto); } }
 @media screen and (max-width: 870px) {
   .team .line {
     left: 44%; }
   .team .team-cards {
-    flex-direction: column; } }
+    flex-direction: column; }
+
+  .services .services-cards {
+    grid-template-columns: auto; } }
 
 /*# sourceMappingURL=style.css.map */

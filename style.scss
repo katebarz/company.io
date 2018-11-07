@@ -136,6 +136,7 @@ header {
 }
 
 ///////////////////////////SECTION TEAM///////////////////////////
+
 .team {
 
     background-color: #000;
@@ -148,14 +149,6 @@ header {
         padding-bottom: 10px;
     }
 
-    .line {
-        width: 100px;
-        height: 3px;
-        background-color: #fcac45;
-        position: relative;
-        left: 46.5%;
-        margin-bottom: 40px;
-    }
 
     .team-cards {
         width: 75%;
@@ -189,6 +182,66 @@ header {
         }
     }
 }
+
+.line {
+    width: 100px;
+    height: 3px;
+    background-color: #fcac45;
+    position: relative;
+    left: 46.5%;
+    margin-bottom: 40px;
+}
+
+
+///////////////////////////SECTION SERVICES///////////////////////////
+.services {
+    width: 75%;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    h1 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    p {
+        color: #6c6c6c;
+        margin-bottom: 50px;
+
+    }
+
+    .services-cards {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-column-gap: 20px;
+
+        .services-card {
+            h4 {
+                margin: 10px 0;
+            }
+
+            .services-icon {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+                border: 3px solid #fcac45;
+                border-radius:50%;
+                display: table;
+				&:hover{
+					transition: .6s;
+					border:3px solid black;
+				}
+                i {
+                    font-size: 54px;
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
 ///////////////////////////MEDIA///////////////////////////
 @media screen and (max-width: 1170px) {
     header {
@@ -265,10 +318,15 @@ header {
         }
     }
 
-
+    .services {
+        .services-cards {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
 
 }
-@media screen and (max-width: 870px){
+
+@media screen and (max-width: 870px) {
     .team {
         .line {
             left: 44%;
@@ -276,6 +334,12 @@ header {
 
         .team-cards {
             flex-direction: column;
+        }
+    }
+
+    .services {
+        .services-cards {
+            grid-template-columns: auto;
         }
     }
 }
