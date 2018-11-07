@@ -82,6 +82,42 @@ header {
   .about .mw-100 {
     min-width: 100%; }
 
+.team {
+  background-color: #000;
+  text-align: center;
+  padding: 100px 0 165px 0;
+  color: #FFF; }
+  .team h1 {
+    font-size: 44px;
+    padding-bottom: 10px; }
+  .team .line {
+    width: 100px;
+    height: 3px;
+    background-color: #fcac45;
+    position: relative;
+    left: 46.5%;
+    margin-bottom: 40px; }
+  .team .team-cards {
+    width: 75%;
+    margin: 0 auto;
+    display: flex; }
+    .team .team-cards .card {
+      margin: 0 30px; }
+      .team .team-cards .card .photo {
+        background-color: #d7d7d7;
+        height: 125px;
+        width: 125px;
+        border-radius: 50%;
+        margin: 20px auto; }
+      .team .team-cards .card .name {
+        font-size: 20px;
+        margin-bottom: 7px; }
+      .team .team-cards .card .position {
+        font-size: 16px;
+        margin-bottom: 30px; }
+      .team .team-cards .card .about-position {
+        font-size: 14px; }
+
 @media screen and (max-width: 1170px) {
   header nav {
     margin-left: 20%; } }
@@ -100,7 +136,7 @@ header {
       position: relative;
       top: 50px;
       left: -270px;
-      height: 340px; }
+      /* height: 340px; */ }
       header nav .top-nav.responsive a {
         float: none;
         display: block;
@@ -108,7 +144,7 @@ header {
         header nav .top-nav.responsive a.icon {
           position: absolute;
           top: -50px;
-          right: -200px; }
+          right: -270px; }
 
   .about {
     flex-direction: column;
@@ -125,5 +161,10 @@ header {
         margin-top: 10px; }
       .about .about-right li {
         text-align: left; } }
+@media screen and (max-width: 870px) {
+  .team .line {
+    left: 44%; }
+  .team .team-cards {
+    flex-direction: column; } }
 
 /*# sourceMappingURL=style.css.map */
