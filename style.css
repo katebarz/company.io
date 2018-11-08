@@ -151,6 +151,30 @@ header {
         display: table-cell;
         vertical-align: middle; }
 
+.clients {
+  background-color: #000;
+  padding: 100px 0 200px 0;
+  color: #FFF;
+  text-align: center; }
+  .clients h1 {
+    margin-bottom: 10px; }
+  .clients img {
+    margin-left: 30px;
+    margin-top: 10px; }
+
+.testimonials {
+  background-color: #000;
+  text-align: center;
+  color: #FFF;
+  padding-bottom: 120px; }
+  .testimonials h1 {
+    margin-bottom: 10px; }
+  .testimonials p {
+    width: 75%;
+    margin: 0 auto 50px auto; }
+    .testimonials p.upper {
+      text-transform: uppercase; }
+
 @media screen and (max-width: 1170px) {
   header nav {
     margin-left: 20%; } }
