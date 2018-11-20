@@ -261,6 +261,46 @@ header {
     }
 }
 
+///////////////////////////SECTION PORTFOLIO///////////////////////////
+.portfolio {
+    width: 75%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+    padding: 50px 0;
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 50px;
+        color: #6c6c6c;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+
+        .portfolio-photo {
+            background-size: cover;
+            background-position: center;
+
+            img {
+                height: 100%;
+                width: 100%;
+
+                &:hover {
+                    opacity: 0.8;
+                    transition: .25s;
+                }
+            }
+        }
+
+    }
+}
+
 ///////////////////////////SECTION TESTIMONIALS///////////////////////////
 .testimonials {
     background-color: #000;
@@ -275,10 +315,12 @@ header {
     p {
         width: 75%;
         margin: 0 auto 50px auto;
+
         &.upper {
             text-transform: uppercase;
         }
     }
+
     padding-bottom:120px;
 
 }
@@ -365,6 +407,14 @@ header {
         }
     }
 
+    .portfolio {
+        .gallery {
+            grid-template-columns: repeat(2, auto);
+            .portfolio-photo:nth-child(3n){
+            	display: none;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 870px) {
@@ -383,4 +433,15 @@ header {
             grid-template-columns: auto;
         }
     }
+
+    .portfolio {
+        .gallery {
+            grid-template-columns: 1fr;
+            .portfolio-photo:nth-child(2n),
+            .portfolio-photo:nth-child(3n){
+            	display: none;
+            }
+        }
+    }
+
 }

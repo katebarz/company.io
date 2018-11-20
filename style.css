@@ -162,6 +162,31 @@ header {
     margin-left: 30px;
     margin-top: 10px; }
 
+.portfolio {
+  width: 75%;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+  padding: 50px 0; }
+  .portfolio h1 {
+    margin-bottom: 10px; }
+  .portfolio p {
+    margin-bottom: 50px;
+    color: #6c6c6c; }
+  .portfolio .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px; }
+    .portfolio .gallery .portfolio-photo {
+      background-size: cover;
+      background-position: center; }
+      .portfolio .gallery .portfolio-photo img {
+        height: 100%;
+        width: 100%; }
+        .portfolio .gallery .portfolio-photo img:hover {
+          opacity: 0.8;
+          transition: .25s; }
+
 .testimonials {
   background-color: #000;
   text-align: center;
@@ -220,7 +245,12 @@ header {
         text-align: left; }
 
   .services .services-cards {
-    grid-template-columns: repeat(2, auto); } }
+    grid-template-columns: repeat(2, auto); }
+
+  .portfolio .gallery {
+    grid-template-columns: repeat(2, auto); }
+    .portfolio .gallery .portfolio-photo:nth-child(3n) {
+      display: none; } }
 @media screen and (max-width: 870px) {
   .team .line {
     left: 44%; }
@@ -228,6 +258,12 @@ header {
     flex-direction: column; }
 
   .services .services-cards {
-    grid-template-columns: auto; } }
+    grid-template-columns: auto; }
+
+  .portfolio .gallery {
+    grid-template-columns: 1fr; }
+    .portfolio .gallery .portfolio-photo:nth-child(2n),
+    .portfolio .gallery .portfolio-photo:nth-child(3n) {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */
