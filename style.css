@@ -48,6 +48,8 @@ header {
     .main .welcome h1 {
       color: #999999;
       font-size: 44px; }
+      .main .welcome h1:after {
+        display: none; }
       .main .welcome h1 .mycompany {
         color: #fcac45; }
     .main .welcome p {
@@ -55,6 +57,14 @@ header {
       font-size: 20px; }
       .main .welcome p b {
         color: #c1bfc0; }
+
+h1:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  padding-top: 10px;
+  border-bottom: 3px solid #fcac45; }
 
 .about {
   width: 75%;
@@ -67,6 +77,8 @@ header {
       display: inline-block;
       border-bottom: 3px solid #fcac45;
       padding-bottom: 15px; }
+      .about .about-right h1:after {
+        display: none; }
       .about .about-right h1 span {
         font-weight: 400; }
     .about .about-right p {
@@ -88,7 +100,6 @@ header {
   padding: 100px 0 165px 0;
   color: #FFF; }
   .team h1 {
-    font-size: 44px;
     padding-bottom: 10px; }
   .team .team-cards {
     width: 75%;
@@ -111,18 +122,19 @@ header {
       .team .team-cards .card .about-position {
         font-size: 14px; }
 
+/* 
 .line {
-  width: 100px;
-  height: 3px;
-  background-color: #fcac45;
-  position: relative;
-  left: 46.5%;
-  margin-bottom: 40px; }
-
+    width: 100px;
+    height: 3px;
+    background-color: #fcac45;
+    position: relative;
+    left: 46.5%;
+    margin-bottom: 40px;
+} */
 .services {
   width: 75%;
   margin: 0 auto;
-  padding: 50px 0; }
+  padding: 100px 0 200px 0; }
   .services h1 {
     text-align: center;
     padding-bottom: 10px; }
@@ -165,9 +177,8 @@ header {
 .portfolio {
   width: 75%;
   margin: 0 auto;
-  padding: 50px 0;
   text-align: center;
-  padding: 50px 0; }
+  padding: 100px 0 200px 0; }
   .portfolio h1 {
     margin-bottom: 10px; }
   .portfolio p {
@@ -181,6 +192,7 @@ header {
       background-size: cover;
       background-position: center; }
       .portfolio .gallery .portfolio-photo img {
+        cursor: pointer;
         height: 100%;
         width: 100%; }
         .portfolio .gallery .portfolio-photo img:hover {
@@ -191,6 +203,7 @@ header {
   background-color: #000;
   text-align: center;
   color: #FFF;
+  padding: 100px 0 200px 0;
   padding-bottom: 120px; }
   .testimonials h1 {
     margin-bottom: 10px; }
@@ -199,6 +212,65 @@ header {
     margin: 0 auto 50px auto; }
     .testimonials p.upper {
       text-transform: uppercase; }
+
+.contact-form {
+  padding: 100px 0 100px 0; }
+  .contact-form h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #000000; }
+  .contact-form .contact-wrapper {
+    width: 750px;
+    margin: 0 auto;
+    color: #636363; }
+    .contact-form .contact-wrapper input {
+      width: 365px;
+      height: 40px;
+      font-size: 20px;
+      margin-bottom: 30px; }
+    .contact-form .contact-wrapper textarea {
+      width: 100%;
+      height: 160px;
+      resize: vertical;
+      max-height: 250px;
+      min-height: 120px; }
+    .contact-form .contact-wrapper input,
+    .contact-form .contact-wrapper textarea {
+      border: 1px solid #999999;
+      margin-top: 5px; }
+    .contact-form .contact-wrapper input:first-of-type {
+      margin-right: 20px; }
+    .contact-form .contact-wrapper .red {
+      color: #FF0000; }
+    .contact-form .contact-wrapper .form-input {
+      display: flex; }
+    .contact-form .contact-wrapper .button-block {
+      display: flex;
+      justify-content: flex-end; }
+      .contact-form .contact-wrapper .button-block input[type=submit] {
+        width: 165px;
+        height: 40px;
+        background-color: #fcac45;
+        color: #FFFFFF;
+        margin-right: 0;
+        margin-top: 20px;
+        border: none; }
+
+footer {
+  background-color: #000; }
+  footer .social {
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; }
+    footer .social img {
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      padding: 3px; }
+      footer .social img:hover {
+        opacity: 0.8; }
 
 @media screen and (max-width: 1170px) {
   header nav {

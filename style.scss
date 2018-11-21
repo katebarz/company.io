@@ -72,6 +72,10 @@ header {
             color: #999999;
             font-size: 44px;
 
+            &:after {
+                display: none;
+            }
+
             .mycompany {
                 color: #fcac45;
             }
@@ -89,6 +93,15 @@ header {
     }
 }
 
+h1:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    padding-top: 10px;
+    border-bottom: 3px solid #fcac45;
+}
+
 ///////////////////////////SECTION ABOUT///////////////////////////
 .about {
     width: 75%;
@@ -103,6 +116,10 @@ header {
             display: inline-block;
             border-bottom: 3px solid #fcac45;
             padding-bottom: 15px;
+
+            &:after {
+                display: none;
+            }
 
             span {
                 font-weight: 400;
@@ -145,7 +162,6 @@ header {
     color: #FFF;
 
     h1 {
-        font-size: 44px;
         padding-bottom: 10px;
     }
 
@@ -183,6 +199,7 @@ header {
     }
 }
 
+/* 
 .line {
     width: 100px;
     height: 3px;
@@ -190,14 +207,14 @@ header {
     position: relative;
     left: 46.5%;
     margin-bottom: 40px;
-}
+} */
 
 
 ///////////////////////////SECTION SERVICES///////////////////////////
 .services {
     width: 75%;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 100px 0 200px 0;
 
     h1 {
         text-align: center;
@@ -265,9 +282,8 @@ header {
 .portfolio {
     width: 75%;
     margin: 0 auto;
-    padding: 50px 0;
     text-align: center;
-    padding: 50px 0;
+    padding: 100px 0 200px 0;
 
     h1 {
         margin-bottom: 10px;
@@ -288,6 +304,7 @@ header {
             background-position: center;
 
             img {
+            	        	cursor:pointer;
                 height: 100%;
                 width: 100%;
 
@@ -306,7 +323,7 @@ header {
     background-color: #000;
     text-align: center;
     color: #FFF;
-
+    padding: 100px 0 200px 0;
 
     h1 {
         margin-bottom: 10px;
@@ -323,6 +340,94 @@ header {
 
     padding-bottom:120px;
 
+}
+
+///////////////////////////SECTION CONTACT FORM///////////////////////////
+.contact-form {
+    padding: 100px 0 100px 0;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #000000;
+    }
+
+    .contact-wrapper {
+        width: 750px;
+        margin: 0 auto;
+        color: #636363;
+
+        input {
+            width: 365px;
+            height: 40px;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 160px;
+            resize: vertical;
+            max-height: 250px;
+            min-height: 120px;
+        }
+
+        input,
+        textarea {
+            border: 1px solid #999999;
+            margin-top: 5px;
+        }
+
+        input:first-of-type {
+            margin-right: 20px;
+        }
+
+        .red {
+            color: #FF0000;
+        }
+
+        .form-input {
+            display: flex;
+        }
+
+        .button-block {
+            display: flex;
+            justify-content: flex-end;
+
+            input[type=submit] {
+                width: 165px;
+                height: 40px;
+                background-color: #fcac45;
+                color: #FFFFFF;
+                margin-right: 0;
+                margin-top: 20px;
+                border: none;
+            }
+        }
+    }
+}
+
+///////////////////////////FOOTER///////////////////////////
+footer {
+
+    background-color: #000;
+
+    .social {
+    	padding: 20px;
+        width: 75%;
+        margin: 0 auto;
+        display:flex;
+        justify-content: center;
+        img{
+        	height: 30px;
+        	width: 30px;
+        	cursor:pointer;
+        	    padding: 3px;
+        	    &:hover{
+        	    	opacity:0.8;
+        	    }
+        }
+    }
 }
 
 ///////////////////////////MEDIA///////////////////////////
@@ -410,8 +515,9 @@ header {
     .portfolio {
         .gallery {
             grid-template-columns: repeat(2, auto);
-            .portfolio-photo:nth-child(3n){
-            	display: none;
+
+            .portfolio-photo:nth-child(3n) {
+                display: none;
             }
         }
     }
@@ -437,9 +543,10 @@ header {
     .portfolio {
         .gallery {
             grid-template-columns: 1fr;
+
             .portfolio-photo:nth-child(2n),
-            .portfolio-photo:nth-child(3n){
-            	display: none;
+            .portfolio-photo:nth-child(3n) {
+                display: none;
             }
         }
     }
